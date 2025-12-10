@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Anime-Sama profil saves",
+  "version": "1.0",
+  "description": "Sauvegarde et restaure le profil Anime-Sama",
+  "permissions": ["storage", "scripting", "tabs"],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
