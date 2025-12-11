@@ -28,16 +28,17 @@ Elle permet de ne jamais perdre ton avancement, même en cas de crash ou de chan
 
 ---
 
-## 📂 Structure des fichiers
+## 📁 Structure des fichiers
 
-anime-sama/ 
-├── manifest.json # Permissions et configuration de l’extension 
-├── background.js # Gestion des sauvegardes et restauration 
-├── content.js # Injection dans Anime-sama (sauvegarde/restauration) 
-├── popup.html # Interface utilisateur 
-├── popup.js # Logique du popup 
-└── icon.png # Icône de l’extension
-
+```text
+anime-sama/
+├── manifest.json       # Permissions et configuration de l’extension
+├── background.js       # Gestion des sauvegardes et restauration
+├── content.js          # Injection dans Anime-sama (sauvegarde/restauration)
+├── popup.html          # Interface utilisateur
+├── popup.js            # Logique du popup
+└── icon.png            # Icône de l’extension
+```
 ---
 
 ## 🔧 Installation
