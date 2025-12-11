@@ -1,25 +1,31 @@
 {
   "manifest_version": 3,
-  "name": "Anime-Sama profil saves",
-  "version": "1.0",
-  "description": "Sauvegarde et restaure le profil Anime-Sama",
-  "permissions": ["storage", "scripting", "tabs"],
-  "host_permissions": [
-    "https://*/*",
-    "http://*/*"
+  "name": "Anime-sama Profile Saver",
+  "version": "1.0.0",
+  "description": "Sauvegarde et restauration automatique du profil Anime-sama.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting",
+    "notifications"
   ],
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": "icon.png"
-  },
+  "host_permissions": [
+	"https://anime-sama.eu/*",
+	"https://*.anime-sama.eu/*",
+	"https://anime-sama.fr/*",
+	"https://*.anime-sama.fr/*",
+	"https://anime-sama.com/*",
+	"https://*.anime-sama.com/*",
+	"https://anime-sama.org/*",
+	"https://*.anime-sama.org/*"
+  ],
   "background": {
     "service_worker": "background.js"
   },
-  "content_scripts": [
-    {
-      "matches": ["https://*/*", "http://*/*"],
-      "js": ["content.js"],
-      "run_at": "document_idle"
-    }
-  ]
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "icon.png"
+  }
 }
